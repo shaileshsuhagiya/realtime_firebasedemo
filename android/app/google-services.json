@@ -1,0 +1,78 @@
+{
+  "project_info": {
+    "project_number": "502833772411",
+    "project_id": "fir-demo-5aad4",
+    "storage_bucket": "fir-demo-5aad4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502833772411:android:2301d54ae9e7c5dff32fde",
+        "android_client_info": {
+          "package_name": "com.example.firebasedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502833772411-aubg9k4k830g4dfr9kpd33urqi5ruk64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasedemo",
+            "certificate_hash": "0f40462607b1bb198ab68e95a179f08c28e50fc4"
+          }
+        },
+        {
+          "client_id": "502833772411-ne0rj261tucsn9vosiq5td145lbqvs6u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasedemo",
+            "certificate_hash": "6154f1e854ebf4630cd2cb0fddd40a56b817a151"
+          }
+        },
+        {
+          "client_id": "502833772411-v3c4fko6jtpvqcnj4uccjpse72uqjnt3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasedemo",
+            "certificate_hash": "c38d0eec0ca76cf894335cf2aa3428ab04eee198"
+          }
+        },
+        {
+          "client_id": "502833772411-vcphkdu1u1tf9v8948driounio48o9k0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasedemo",
+            "certificate_hash": "0227d2e85dba1d6c243d5735e5069f8636737f43"
+          }
+        },
+        {
+          "client_id": "502833772411-5mifcb4qlalg90gk9fekkine34tpd9m2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJEruHKobKB7dUUFhONHoGsdsVarqA42s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502833772411-5mifcb4qlalg90gk9fekkine34tpd9m2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "502833772411-hocm9pr5huchdvussk5c810v8kjjq85u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebasedemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
