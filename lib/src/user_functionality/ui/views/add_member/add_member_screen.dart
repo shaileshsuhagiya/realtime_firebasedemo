@@ -1,5 +1,6 @@
 import 'package:firebasedemo/src/configs/app_colors.dart';
 import 'package:firebasedemo/src/configs/app_strings.dart';
+import 'package:firebasedemo/src/configs/app_text_style.dart';
 import 'package:firebasedemo/src/user_functionality/business_logic/models/user_entity_model.dart';
 import 'package:firebasedemo/src/user_functionality/business_logic/view_models/add_member_view_model.dart';
 import 'package:firebasedemo/src/user_functionality/ui/views/add_member/horizontal_user_tile.dart';
@@ -121,7 +122,16 @@ class AddMemberScreen extends GetView<AddMemberViewModel> {
                     ),
                   ],
                 )
-              : Container()),
+              : Container(
+                  margin: EdgeInsets.only(top: 100),
+                  child: Text(
+                    AppStrings.noFound,
+                    style: const TextStyle(
+                        color: AppColor.subTitle,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500),
+                  ),
+                )),
           Expanded(
             child: SingleChildScrollView(
               child: Obx(
@@ -152,7 +162,7 @@ class AddMemberScreen extends GetView<AddMemberViewModel> {
             if (controller.selectedUserList.isNotEmpty) {
               Get.back(result: controller.selectedUserList);
             } else {
-              Fluttertoast.showToast(msg:AppStrings.selectMemberMin);
+              Fluttertoast.showToast(msg: AppStrings.selectMemberMin);
             }
           },
           child: Hero(

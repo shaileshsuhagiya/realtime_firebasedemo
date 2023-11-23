@@ -59,4 +59,6 @@ class AppStrings {
   static const user = 'users';
   static const roomTable = 'room';
 
+  static String noFound = "Users not found";
+
 }
