@@ -82,7 +82,7 @@ class AddMemberScreen extends GetView<AddMemberViewModel> {
       ),
       body: Column(
         children: [
-          Obx(() => controller.selectedUserList.toList().isNotEmpty
+          Obx(() => controller.selectedUserList.isNotEmpty
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -92,12 +92,10 @@ class AddMemberScreen extends GetView<AddMemberViewModel> {
                         scrollDirection: Axis.horizontal,
                         controller: controller.scrollController,
                         shrinkWrap: true,
-                        itemCount: controller.selectedUserList
-                            .toList()
-                            .length,
+                        itemCount: controller.selectedUserList.length,
                         itemBuilder: (BuildContext context, int index) {
-                          List<UserModel> data = controller.selectedUserList
-                              .toList();
+                          List<UserModel> data =
+                              controller.selectedUserList;
                           UserModel userModel = data[index];
                           return HorizontalUserTile(userModel, index);
                         },
