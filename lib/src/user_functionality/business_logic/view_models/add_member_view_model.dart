@@ -97,5 +97,6 @@ class AddMemberViewModel extends BaseModel {
     });
     allUserList.refresh();
     userList.refresh();
+    selectedUserList.refresh();
   }
 }

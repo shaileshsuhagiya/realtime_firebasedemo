@@ -82,11 +82,7 @@ class AddMemberScreen extends GetView<AddMemberViewModel> {
       ),
       body: Column(
         children: [
-          Obx(() => controller.selectedUserList
-                  .toList()
-                  .where((element) => element.isSelected)
-                  .toList()
-                  .isNotEmpty
+          Obx(() => controller.selectedUserList.toList().isNotEmpty
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -98,13 +94,9 @@ class AddMemberScreen extends GetView<AddMemberViewModel> {
                         shrinkWrap: true,
                         itemCount: controller.selectedUserList
                             .toList()
-                            .where((element) => element.isSelected)
-                            .toList()
                             .length,
                         itemBuilder: (BuildContext context, int index) {
                           List<UserModel> data = controller.selectedUserList
-                              .toList()
-                              .where((element) => element.isSelected)
                               .toList();
                           UserModel userModel = data[index];
                           return HorizontalUserTile(userModel, index);
@@ -122,32 +114,34 @@ class AddMemberScreen extends GetView<AddMemberViewModel> {
                     ),
                   ],
                 )
-              : Container(
-                  margin: EdgeInsets.only(top: 100),
-                  child: Text(
-                    AppStrings.noFound,
-                    style: const TextStyle(
-                        color: AppColor.subTitle,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500),
-                  ),
-                )),
+              : Container()),
           Expanded(
             child: SingleChildScrollView(
               child: Obx(
-                () => ListView.builder(
-                  shrinkWrap: true,
-                  keyboardDismissBehavior:
-                      ScrollViewKeyboardDismissBehavior.onDrag,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: controller.userList.toList().length,
-                  // padding: const EdgeInsets.only(top: 5),
-                  itemBuilder: (context, index) {
-                    List<UserModel> data = controller.userList.toList();
-                    UserModel userModel = data[index];
-                    return UserTile(userModel, index);
-                  },
-                ),
+                () => controller.userList.isNotEmpty
+                    ? ListView.builder(
+                        shrinkWrap: true,
+                        keyboardDismissBehavior:
+                            ScrollViewKeyboardDismissBehavior.onDrag,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: controller.userList.toList().length,
+                        // padding: const EdgeInsets.only(top: 5),
+                        itemBuilder: (context, index) {
+                          List<UserModel> data = controller.userList.toList();
+                          UserModel userModel = data[index];
+                          return UserTile(userModel, index);
+                        },
+                      )
+                    : Container(
+                        margin: EdgeInsets.only(top: 100),
+                        child: Text(
+                          AppStrings.noFound,
+                          style: const TextStyle(
+                              color: AppColor.subTitle,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
               ),
             ),
           )
