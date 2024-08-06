@@ -1,16 +1,27 @@
-# firebasedemo
+# Real-Time Document Editing App
 
-A new Flutter project.
+This Flutter app demonstrates a real-time document editing platform similar to Google Docs. It includes features for user authentication (login/signup), real-time document updates, and managing document members. The app utilizes Firebase for backend services, MVVM architecture for code organization, and Provider for state management.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Real-time document editing and updates
+- User authentication (login and signup) with Firebase
+- Add and remove members from documents
+- MVVM architecture for separation of concerns
+- Provider for state management
 
-A few resources to get you started if this is your first Flutter project:
+## Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Before you begin, ensure you have met the following requirements:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter SDK installed
+- Firebase project setup
+- A code editor (e.g., Visual Studio Code, Android Studio)
+- Basic knowledge of Flutter, Firebase, MVVM architecture, and Provider
+
+## Contributing
+- Contributions are welcome! If you have suggestions, improvements, or bug fixes, please open an issue or submit a pull request.
+
+## Contact
+- For any inquiries or feedback, please contact shailesh.dev1997@gmail.com.
+
